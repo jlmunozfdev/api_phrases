@@ -1,0 +1,26 @@
+{% extends "./layouts/_base.html" %}
+
+{% block title %}Phrase{% endblock title %}
+
+{% block content %}
+
+<h1 class="text-white sm:text-5xl text-3xl font-bold uppercase gradient-text text-center">Obtener su Frase del Día</h1>
+    <div class="w-full max-w-md p-4 flex flex-col justify-center items-center">
+        <form method="POST" class="w-full bg-amber-500 p-4 rounded-md flex flex-col gap-4">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Ingrese tu nombre" class="w-full border-2 border-indigo-900 rounded-md py-2 px-2 placeholder-sky-900 text-sky-700" required>
+            <button type="submit" class="bg-blue-800 w-full px-8 py-1.5 rounded-md font-bold uppercase text-white hover:bg-blue-500">
+                Obtener Frase
+            </button>
+        </form>
+    </div>
+
+    {% if name %}
+            <div class="mt-2 text-lg text-center bg-violet-900 p-4 rounded-md opacity-70 drop-shadow-xl">
+                <p class="text-white text-md">¡{{ greeting }} esta es tu frase del día de hoy, <strong>{{ name }}!</strong></p>
+                <p class="text-gray-400 italic">"{{ quote }}"</p>
+                <cite class="text-gray-400">— {{ author }}</cite>
+            </div>
+        {% endif %}
+
+{% endblock content %}

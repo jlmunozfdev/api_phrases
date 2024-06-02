@@ -1,0 +1,46 @@
+<!-- templates/_base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'src/main.css' %}">
+    <!-- Font Awesome Icons -->
+    <script
+    src="https://kit.fontawesome.com/bc48b26896.js"
+    crossorigin="anonymous"></script>
+    
+
+    {% block styles %}{% endblock styles %}
+
+</head>
+
+<body class="bg-gradient-to-t from-gray-900 via-purple-900 to-violet-600 flex flex-col justify-between h-screen">
+
+   {% comment %} NAV SOCIAL {% endcomment %}
+    {% include "./partials/nav.html" %}
+    {% comment %} CONTENIDO {% endcomment %}
+    <main class="flex flex-col justify-center align-top items-center m-4">
+       
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    {% comment %} FOOTER {% endcomment %}
+   {% include "./partials/footer.html" %}
+
+    {% comment %} SCRIPTS {% endcomment %}
+   {% block scripts %}
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+   {% endblock scripts %}
+</body>
+
+</html>

@@ -1,4 +1,4 @@
 node_modules
 venv
-app/__pycache__
+phrases/__pycache__
 app/migrations/__pycache__
