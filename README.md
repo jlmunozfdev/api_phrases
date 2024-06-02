@@ -8,7 +8,7 @@
     <li><h4>Install Django</h4></li>
     Type <code>pip install django</code> in your terminal to install <b style="color:yellow">Django.</b>
     <li><h4>Install Pytube</h4></li>
-    Type <code>pip install pytube</code> in your terminal to install <b style="color:yellow">Pytube.</b>
+    Type <code>pip install requests</code> in your terminal to install <b style="color:yellow">Requests.</b>
     <li><h4>Install and configure Tailwind</h4></li><p>Check the official page to install and configure <a href="https://tailwindcss.com/docs/installation" target="_blank">Tailwind</a>.</p>
  </ol>
 
